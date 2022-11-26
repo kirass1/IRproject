@@ -1,0 +1,11 @@
+<style type="text/css">
+    @import url("../static/result.css");
+    
+    </style>
+<img src="/static/result.jpg"  class="backgroundimg"/>
+<body>
+    <h1>Found {{hits}} for query {{keywords}}: </h1>
+    {% for doc in docs %}
+        <p>{{doc["_source"]['title']}} by {{doc["_source"]['author']}}</p>
+    {% endfor %}
+</body>
